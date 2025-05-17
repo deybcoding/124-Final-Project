@@ -10,12 +10,23 @@ import sys
 import os
 
 class SNOLInterpreter:
+    """
+    Core SNOL interpreter class.
+    Handles command processing, variable storage, and command history.
+    """
     def __init__(self):
+        """
+        Initialize interpreter state: variables and command history.
+        """
         self.variables = {}
         self.command_history = []
     
     # Interpret and dispatch a command
     def process_command(self, command):
+        """
+        Interpret and dispatch a single SNOL command.
+        Handles built-in commands, variable assignment, expressions, and error reporting.
+        """
         command = command.strip()
         if not command:
             return
@@ -53,6 +64,10 @@ class SNOLInterpreter:
             cprint("SNOL> Unknown command! Does not match any valid command of the language.", RED)
     
     def run(self):
+        """
+        Start the SNOL interpreter REPL loop.
+        Accepts user input and processes commands until termination.
+        """
         cprint("The SNOL environment is now active, you may proceed with giving your commands.", BLUE)
         while True:
             try:

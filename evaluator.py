@@ -4,6 +4,12 @@ from validators import parse_value
 
 # Evaluate arithmetic expressions
 def evaluate_expression(expr, variables):
+    """
+    Evaluate an arithmetic expression in SNOL.
+    Supports single values and binary operations (+, -, *, /, %).
+    Ensures operands are of the same type and handles errors.
+    Returns (result, type) or (None, None) on error.
+    """
     tokens = expr.split()
     if len(tokens) == 1:
         return parse_value(tokens[0], variables)

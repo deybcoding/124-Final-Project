@@ -5,6 +5,10 @@ from evaluator import evaluate_expression
 
 # Command: BEG var
 def handle_input(command, variables):
+    """
+    Handle the BEG command.
+    Prompts the user for input and assigns the value to the specified variable.
+    """
     parts = command.split()
     if len(parts) != 2 or not is_valid_var_name(parts[1]):
         cprint("SNOL> Unknown command! Does not match any valid command of the language.", RED)
@@ -21,6 +25,10 @@ def handle_input(command, variables):
 
 # Command: PRINT var
 def handle_print(command, variables):
+    """
+    Handle the PRINT command.
+    Prints the value (and optionally type) of a variable or literal.
+    """
     parts = command.split()
     if len(parts) != 2:
         cprint("SNOL> Unknown command! Does not match any valid command of the language.", RED)
@@ -41,6 +49,10 @@ def handle_print(command, variables):
 
 # Command: var = expr
 def handle_assignment(command, variables):
+    """
+    Handle variable assignment (var = expr).
+    Evaluates the expression and assigns the result to the variable.
+    """
     if '=' not in command:
         cprint("SNOL> Unknown command! Does not match any valid command of the language.", RED)
         return
@@ -56,21 +68,34 @@ def handle_assignment(command, variables):
 
 # Simple expression handling
 def handle_expression(command, variables):
+    """
+    Handle arithmetic expressions directly entered by the user.
+    Evaluates the expression but does not assign or print the result.
+    """
     result, _ = evaluate_expression(command, variables)
     # No output required for successful expression
 
 # Built-in extras
 def show_history(command_history):
+    """
+    Display the history of commands entered in the current session.
+    """
     cprint("SNOL> You've entered the following commands:", YELLOW)
     for i, cmd in enumerate(command_history, 1):
         print(f"{i}. {cmd}")
 
 def list_variables(variables):
+    """
+    List all currently defined variables and their values/types.
+    """
     cprint("SNOL> Currently defined variables:", YELLOW)
     for k, (v, t) in variables.items():
         print(f"[{k}] = {v} ({t})")
 
 def show_help():
+    """
+    Display help message listing all supported SNOL commands and features.
+    """
     cprint("SNOL> Supported SNOL commands:", YELLOW)
     print("  - var = expr        : Assigns a value or result to a variable")
     print("  - BEG var           : Prompts for user input")

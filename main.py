@@ -8,8 +8,10 @@ from constants import YELLOW
 from utils import cprint
 from interpreter import SNOLInterpreter
 
-# Print all supported commands and special features at the top
 def print_welcome_message():
+    """
+    Print the welcome message and list all supported SNOL commands and features.
+    """
     cprint("""
 Welcome to the SNOL Interpreter! Here are the supported commands:
 
@@ -31,6 +33,10 @@ Note: SNOL is case-sensitive. Use commands exactly as shown.
 
 # Main loop
 def main():
+    """
+    Entry point for the SNOL interpreter.
+    Prints the welcome message and starts the interpreter loop.
+    """
     print_welcome_message()
     interpreter = SNOLInterpreter()
     interpreter.run()
