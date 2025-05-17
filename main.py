@@ -24,6 +24,7 @@ Special Features:
   - HISTORY           : Shows entered commands
   - LISTVARS          : Lists all defined variables and their types
   - HELP              : Displays supported commands and usage help
+  - CLEAR             : Clears the console
 
 Note: SNOL is case-sensitive. Use commands exactly as shown.
 """, YELLOW)

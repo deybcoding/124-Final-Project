@@ -7,6 +7,7 @@ from commands import (
     handle_expression, show_history, list_variables, show_help
 )
 import sys
+import os
 
 class SNOLInterpreter:
     def __init__(self):
@@ -30,6 +31,10 @@ class SNOLInterpreter:
             list_variables(self.variables)
         elif command == "HELP":
             show_help()
+        elif command == "CLEAR":
+            os.system("cls" if os.name == "nt" else "clear")
+            from main import print_welcome_message
+            print_welcome_message()
         elif command.startswith("BEG "):
             handle_input(command, self.variables)
         elif command.startswith("PRINT "):
