@@ -6,6 +6,7 @@ from commands import (
     handle_input, handle_print, handle_assignment, 
     handle_expression, show_history, list_variables, show_help
 )
+import sys
 
 class SNOLInterpreter:
     def __init__(self):
@@ -22,7 +23,7 @@ class SNOLInterpreter:
         
         if command == "EXIT!":
             cprint("Interpreter is now terminated…", BLUE)
-            exit(0)
+            sys.exit()
         elif command == "HISTORY":
             show_history(self.command_history)
         elif command == "LISTVARS":
