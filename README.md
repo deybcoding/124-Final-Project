@@ -1,22 +1,5 @@
 # SNOL Interpreter Project
 
-<<<<<<< HEAD
-A custom interpreter for the SNOL (Simple Number-Only Language) specification, written in Python. Features include user-friendly interface, error handling, command history, colorized output, variable listing, and more.
-
----
-
-## Project Structure
-
-The project is organized into the following modules:
-
-- **main.py**: Entry point of the application
-- **constants.py**: Color codes and configuration settings
-- **utils.py**: Utility functions for output formatting
-- **validators.py**: Input validation for variables and literals
-- **evaluator.py**: Expression evaluation logic for arithmetic operations
-- **commands.py**: Command processing functions (BEG, PRINT, etc.)
-- **interpreter.py**: Core interpreter class and main processing logic
-=======
 This is a custom interpreter for the SNOL (Simple Number-Only Language) specification, written in Python, with user-friendly features, error handling, command history, colorized output, variable listing, and more.
 
 ---
@@ -32,7 +15,6 @@ The project is organized into the following modules:
 - **evaluator.py**: Expression evaluation logic for arithmetic operations  
 - **commands.py**: Command processing functions (BEG, PRINT, etc.)  
 - **interpreter.py**: Core interpreter class and main processing logic  
->>>>>>> a9e7ba3fbd2b666a3d90375f207b16bff5dcde7a
 
 ---
 
@@ -65,21 +47,6 @@ python main.py
 
 ## SNOL Commands
 
-<<<<<<< HEAD
-- `var = expr` &mdash; Assigns a value or result to a variable
-- `BEG var` &mdash; Prompts for user input
-- `PRINT var` &mdash; Displays value of a variable
-- `expr1 + expr2` &mdash; Arithmetic expressions (also `-`, `*`, `/`, `%`)
-- `EXIT!` &mdash; Terminates the interpreter
-
----
-
-## Special Features
-
-- `HISTORY` &mdash; Shows entered commands
-- `LISTVARS` &mdash; Lists all defined variables and their types
-- `HELP` &mdash; Displays supported commands and usage help
-=======
 - `var = expr` : Assigns a value or result to a variable
 - `BEG var` : Prompts for user input
 - `PRINT var` : Displays value of a variable
@@ -91,7 +58,6 @@ python main.py
 - `HISTORY` : Shows entered commands
 - `LISTVARS` : Lists all defined variables and their types
 - `HELP` : Displays supported commands and usage help
->>>>>>> a9e7ba3fbd2b666a3d90375f207b16bff5dcde7a
 
 ---
 
@@ -100,9 +66,4 @@ python main.py
 - Dave Royo
 - Mark Pena
 - Dave Dagohoy
-<<<<<<< HEAD
 - Johnric Apolinario
-
-=======
-- Johnric Apolinario
->>>>>>> a9e7ba3fbd2b666a3d90375f207b16bff5dcde7a
